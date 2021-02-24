@@ -3,6 +3,7 @@ from django.http import Http404
 from .models import Artwork
 from .forms import ArtworkForm, RawArtForm
 
+# function based views
 
 # Create your views here.
 def artwork_detail_view(request):

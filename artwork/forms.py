@@ -1,6 +1,6 @@
 from django import forms
-
 from .models import Artwork
+from django.contrib.auth.models import User
 
 class ArtworkForm(forms.ModelForm):
     email = forms.EmailField()

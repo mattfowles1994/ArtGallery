@@ -21,11 +21,13 @@ from pages.views import (
 )
 
 urlpatterns = [
+    path('accounts/', include('accounts.urls')),
     path('artwork/', include('artwork.urls')),
 
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
     path('home/', home_view, name='home'),
     path('contact/', contact_view, name='contact'),
+    path('login/', home_view, name='login')
 
 ]

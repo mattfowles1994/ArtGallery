@@ -9,7 +9,7 @@ class Artwork(models.Model):
         width = models.TextField()
         height = models.TextField()
         artist = models.TextField(default='V.Galvao')
-        available = models.NullBooleanField()
+        available = models.BooleanField(null=True)
 
         def get_absolute_url(self):
                 return reverse("artwork:artwork", kwargs={"id": self.id})  #f"/artwork/{self.id}/"
@@ -19,4 +19,6 @@ class SearchParams(models.Model):
         width = models.TextField()
         height = models.TextField()
         artist = models.TextField()
-        
+        user = models.TextField()
+
+

@@ -1,0 +1,22 @@
+  
+body {
+  background-color: #F3F3F9;
+}
+
+.logo {
+  font-family: 'Peralta', cursive;
+}
+
+.logo a {
+  color: rgba(0,0,0,.9);
+}
+
+.logo a:hover,
+.logo a:active {
+  text-decoration: none;
+}
+
+  
+.navbar-brand {
+font-family: 'Peralta', cursive;
+}
