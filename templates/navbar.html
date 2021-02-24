@@ -1,20 +1,11 @@
 <nav>
     {% if user.is_authenticated %}
-        <p> {{ request.user }}  <a href='../../home'>Logout</a></p>
+        <p> {{ request.user }}  <a href='/accounts/logout'>Logout</a></p>
             
     {% else %}
-        <p> <a href=''>Login</a></p>
-        <p> <a href='accounts/signup/'>Register</a></p>
+        <p> <a href='/accounts/login'>Login</a></p>
+        <p> <a href='/accounts/signup/'>Register</a></p>
     {% endif %}
 
-<!--Login Form
-<form method="POST" action="{% url 'login' %}">
-    {% csrf_token %}
 
-    <p>Username: {{ form.username }}</p>
-    <p>Password: {{ form.password }}</p>
-
-    <input type="submit" value="login"> 
-</form>
--->
 </nav>
