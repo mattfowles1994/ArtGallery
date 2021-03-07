@@ -1,11 +1,20 @@
+{% load static %}
 <nav>
-    {% if user.is_authenticated %}
-        <p> {{ request.user }}  <a href='/accounts/logout'>Logout</a></p>
-            
-    {% else %}
-        <p> <a href='/accounts/login'>Login</a></p>
-        <p> <a href='/accounts/signup/'>Register</a></p>
-    {% endif %}
+<span>
+    <img id="logo" src="{% static 'app/css/logo.png' %}"">
+</span>
 
+<span>
+    <ul class="navbarAuth">
+        {% if user.is_authenticated %}
+        <li>{{ request.user }}</li>
+        <li><a href='/accounts/logout'>Logout</a></li> 
+        
+        {% else %}
+        <li><a href='/accounts/login'>Login</a></li>
+        <li><a href='/accounts/signup/'>Register</a></li>
+    {% endif %}
+    </ul>
+</span>
 
 </nav>

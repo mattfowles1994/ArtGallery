@@ -1,6 +1,24 @@
   
 body {
   background-color: #F3F3F9;
+  margin: 0px;
+}
+
+nav {
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d7d7db;
+}
+
+nav span {
+  width: 50%;
+  display:inline;
+}
+
+nav span ul {
+  float: right;
 }
 
 .logo {
@@ -19,4 +37,15 @@ body {
   
 .navbar-brand {
 font-family: 'Peralta', cursive;
+}
+
+.navbarAuth {
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#logo {
+  width: 20%;
+  float: left;
 }
