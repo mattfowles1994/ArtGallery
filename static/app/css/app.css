@@ -1,39 +1,18 @@
   
 body {
-  background-color: #E3E3E3;
   margin: 0px;
-  font-family: 'RocknRoll One', sans-serif;
+  font-family: 'RocknRoll One', sans-serif; 
+  background-color: #f7f9fa;
+  padding-top: 70px;
 }
 
-nav {
-  height: 20%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #F6F6F8;
-  padding-right: 10px;
+#jumbo1 {
+	color: #2c3e50;
+	background: #ecf0f1;
 }
 
-nav span {
-  width: 50%;
-  display:inline;
-}
-
-nav span ul {
-  float: right;
-}
-
-.logo {
-  font-family: 'Peralta', cursive;
-}
-
-.logo a {
-  color: rgba(0,0,0,.9);
-}
-
-.logo a:hover,
-.logo a:active {
-  text-decoration: none;
+#navbar1 {
+	background: #2c3e50;
 }
 
 .gallery {
@@ -45,9 +24,13 @@ nav span ul {
   margin: 8px;
 }
 
+#image {
+  width: auto;
+  height: 200px;
+}
+
 .galleryItem {
-  width: 300px;
-  height: 230px;
+  overflow: hidden;
   object-fit: contain;
   display: block;
   margin-left: auto;
@@ -62,17 +45,14 @@ ul li p {
   color: #C60021;
 }
 
-.navbar-brand {
-font-family: 'Peralta', cursive;
+#artworkTitle {
+  text-align: center;
 }
 
-.navbarAuth {
-    list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-#logo {
-  width: 20%;
-  float: left;
+#login {
+  width: 25%; /* Can be in percentage also. */
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
 }
