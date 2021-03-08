@@ -1,21 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+
 <div>
-<h1>Hello World</h1>
-
-<p>this is a template</p>
-
-<p>
-    {{ my_text }}, {{ my_number }}
-    
-</p>
-
-<ul>
-{% for my_subitem in my_list %}
-    <li>{{ forloop.counter }} - {{ my_subitem }}</li>
-{% endfor %}
-</ul>
+    <ul>
+        {% for object in object_list %}
+            <a href="{{ object.get_absolute_url }}"><li class="gallery"><p>{{ object.title }}</p>  <img class="galleryItem"  src="{{ object.images.url }}" alt="{{ object.title }}"></li></a>
+        {% endfor %}
+    </ul>
 </div>
 
 {% endblock %}

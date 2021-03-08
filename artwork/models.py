@@ -10,6 +10,7 @@ class Artwork(models.Model):
         height = models.TextField()
         artist = models.TextField(default='V.Galvao')
         available = models.BooleanField(null=True)
+        images = models.ImageField(default='AG\images\default.PNG')
 
         def get_absolute_url(self):
                 return reverse("artwork:artwork", kwargs={"id": self.id})  #f"/artwork/{self.id}/"
