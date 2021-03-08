@@ -11,6 +11,7 @@ class Artwork(models.Model):
         artist = models.TextField(default='V.Galvao')
         available = models.BooleanField(null=True)
         images = models.ImageField(default='AG\images\default.PNG')
+        year = models.IntegerField(default='0')
 
         def get_absolute_url(self):
                 return reverse("artwork:artwork", kwargs={"id": self.id})  #f"/artwork/{self.id}/"
