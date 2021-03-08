@@ -1,7 +1,8 @@
   
 body {
-  background-color: #F3F3F9;
+  background-color: #E3E3E3;
   margin: 0px;
+  font-family: 'RocknRoll One', sans-serif;
 }
 
 nav {
@@ -9,7 +10,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #d7d7db;
+  background-color: #F6F6F8;
+  padding-right: 10px;
 }
 
 nav span {
@@ -57,6 +59,7 @@ ul li p {
   vertical-align: middle; 
   margin: 5px;
   text-align: center;
+  color: #C60021;
 }
 
 .navbar-brand {
