@@ -8,16 +8,12 @@ def home_view(request, *args, **kwargs):
     queryset = Artwork.objects.all()
 
     my_context = {
-        "my_text": "this is about us",
-        "my_number": 123,
-        "my_list": [
-            1,
-            3,
-            4
-        ],
         "object_list": queryset
     }
     return render(request, "home.html", my_context)
 
-def contact_view(request, *args, **kwargs):
-    return HttpResponse("<h1>Hello Contacts</h1>")
+def about_view(request, *args, **kwargs):
+    context = {
+    
+    }
+    return render(request, "about.html", context)
