@@ -1,9 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<h1>{{ object.title }}</h1>
-<p>{% if object.description %}{{ object.description }} {% else %} No description {% endif %}</p>
-<p>{{ object.price }}</p>
+<div>
+    <h1 id="detailTitle">{{ object.title }}</h1>
+</div>
+<div id="detail" class="row">
+    <div class="col-md-8">
+        <div class="thumbnail">            
+            <img id="imageDetail" src="{{ object.images.url }}" alt="{{ object.title }}">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="thumbnail">   
+            <ul id="detail">        
+                <li><strong>Title:</strong> {{ object.title }}</li>
+                <li><strong>Description:</strong> {{ object.descrilition }}</li>
+                <li><strong>Width:</strong> {{ object.width }}mm</li>
+                <li><strong>Height:</strong> {{ object.height }}mm</li>
+                <li><strong>Artist:</strong> {{ object.artist }}</li>
+                <li><strong>Year:</strong> {{ object.year }}</li>
+            </ul> 
+        </div>
+    </div>
+</div>
 
 {% endblock %}

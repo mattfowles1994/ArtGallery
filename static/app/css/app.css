@@ -2,7 +2,7 @@
 body {
   margin: 0px;
   font-family: 'RocknRoll One', sans-serif; 
-  background-color: #f7f9fa;
+  background-color: #dbdbdb;
   padding-top: 70px;
 }
 
@@ -29,6 +29,17 @@ body {
   height: 200px;
 }
 
+#imageDetail {
+  max-width:100%;
+  min-height:300px;
+  object-fit: cover;
+  padding: 2%;
+}
+
+#detailTitle {
+  text-align: center;
+}
+
 .galleryItem {
   overflow: hidden;
   object-fit: contain;
@@ -36,13 +47,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 3px;
-}
-
-ul li p {
-  vertical-align: middle; 
-  margin: 5px;
-  text-align: center;
-  color: #C60021;
 }
 
 #artworkTitle {
@@ -56,3 +60,11 @@ ul li p {
   padding: 10px;
   position: relative;
 }
+
+#detail {
+  list-style-type: none;
+  margin-left: 15px;
+  margin-top: 15px;
+  text-align: left;
+  padding-left: 0px;
+ }
