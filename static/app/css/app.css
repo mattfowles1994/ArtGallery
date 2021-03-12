@@ -1,10 +1,12 @@
   
 body {
   margin: 0px;
+
 }
 
 body.portal {
   padding-top: 70px;
+  background: url('test_background.png') !important;
 }
 
 div {
@@ -13,7 +15,7 @@ div {
 
 #jumbo1 {
 	color: #2c3e50;
-	background: #ecf0f1;
+	background-color: rgb(236, 240, 241, 0.6);
 }
 
 #navbar1 {
@@ -45,15 +47,6 @@ div {
   text-align: center;
 }
 
-.galleryItem {
-  overflow: hidden;
-  object-fit: contain;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 3px;
-}
-
 #artworkTitle {
   text-align: center;
 }
@@ -68,12 +61,15 @@ div {
 
 #detail {
   list-style-type: none;
-  margin-left: 15px;
-  margin-top: 15px;
   text-align: left;
   padding-left: 0px;
+  margin: 8px;
  }
 
+ #detail li {
+  margin-left: 15px;
+  margin-top: 5px;
+ }
 
  #header {
   background: #2c3e50;
@@ -92,7 +88,34 @@ div {
    color: black;
  }
 
-
 ul {
   margin: 0 !important;
+}
+
+#about {
+  list-style-type: none;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+#about li {
+  margin-top: 10px;
+}
+
+.thumbnail {
+  border: 2px solid #ddd !important;
+  border-radius: 8px !important;
+  background-color: rgb(236, 240, 241, 0.6) !important;
+  color: #2c3e50;
+}
+
+#login {
+  border: 2px solid #ddd !important;
+  border-radius: 8px !important;
+  background-color: rgb(236, 240, 241, 0.6) !important;
+  min-width: 50%;
+}
+
+.icon-bar {
+  background-color: #9d9d9d !important;
 }

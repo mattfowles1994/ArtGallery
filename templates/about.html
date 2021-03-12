@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+{% load static %}
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-sm-6">
-            <div class="thumbnail">
-                <p><h1>Penny's Art Corner</h1></p>            
-                <img id="image">
+            <div id="about" class="thumbnail">
+                <h1>Penny's Art Corner</h1>           
+                <img id="image" src="{% static 'app/css/Penny.jpg' %}"">
             </div>
         </div>
         <div class="col-lg-4 col-sm-6">
             <div class="thumbnail">   
-                <ul id="detail">        
+                <ul id="about">        
                     <li>Penny's Art Corner is a family run art showroom found in 1934 which features fantasic art from local artists as well as some other exotic pieces. Come and visit our showroom or enquire about a piece online!</li>
                     <li><strong>Telephone:</strong> 01452226563</li>
                     <li><strong>Address:</strong> 89  Golf Road, SWINTON, TD11 9JD</li>
