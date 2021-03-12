@@ -2,8 +2,6 @@
 body {
   margin: 0px;
   font-family: 'Courgette', cursive;
-  background-color: #dbdbdb;
-  padding-top: 70px;
 }
 
 div {
@@ -71,4 +69,22 @@ div {
   margin-top: 15px;
   text-align: left;
   padding-left: 0px;
+ }
+
+
+ #header {
+  background: #2c3e50;
+ }
+
+ .module caption {
+  background: #2c3e50;
+ }
+
+ div.breadcrumbs {
+	background: #ecf0f1;
+  color: #2c3e50;
+ }
+
+ div.breadcrumbs a {
+   color: black;
  }
