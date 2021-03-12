@@ -1,7 +1,10 @@
   
 body {
   margin: 0px;
-  font-family: 'Courgette', cursive;
+}
+
+body.portal {
+  padding-top: 70px;
 }
 
 div {
@@ -88,3 +91,8 @@ div {
  div.breadcrumbs a {
    color: black;
  }
+
+
+ul {
+  margin: 0 !important;
+}
