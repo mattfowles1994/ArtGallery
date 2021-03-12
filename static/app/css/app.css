@@ -1,9 +1,13 @@
   
 body {
   margin: 0px;
-  font-family: 'RocknRoll One', sans-serif; 
+  font-family: 'Courgette', cursive;
   background-color: #dbdbdb;
   padding-top: 70px;
+}
+
+div {
+  font-family: 'Courgette', cursive;
 }
 
 #jumbo1 {
