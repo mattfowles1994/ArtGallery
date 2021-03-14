@@ -119,3 +119,13 @@ ul {
 .icon-bar {
   background-color: #9d9d9d !important;
 }
+
+.current {
+  background-color:#18222b !important;
+}
+
+footer {
+  text-align: center;
+  margin: 30px;
+  color: white;
+}

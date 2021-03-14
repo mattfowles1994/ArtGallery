@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div>
-    <h1 id="detailTitle">{{ object.title }}</h1>
-</div>
+
 <div id="detail" class="row">
     <div class="col-md-8">
-        <div class="thumbnail">            
+        <div class="thumbnail">
+            <h1 id="detailTitle">{{ object.title }}</h1>            
             <img id="imageDetail" src="{{ object.images.url }}" alt="{{ object.title }}">
         </div>
     </div>

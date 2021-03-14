@@ -21,8 +21,29 @@
         {% block content %}
         
         {% endblock %}
+
+        <footer>&copy; Copyright 2021 mfowles.com</footer>
+
         <script src="{% static 'app/js/jquery-3.5.1.min.js' %}"></script>
         <script src="{% static 'app/js/popper.min.js' %}"></script>
         <script src="{% static 'app/js/bootstrap.min.js' %}"></script>
+        <script>
+        function highlightCurrent() {
+            const curPage = document.URL;
+            const links = document.getElementsByTagName('a');
+            for (let link of links) {
+              if (link.href == curPage) {
+                link.classList.add("current");
+              }
+            }
+          }
+   
+   
+          document.onreadystatechange = () => {
+            if (document.readyState === 'complete') {
+              highlightCurrent()
+            }
+          };
+        </script>
     </body>
 </html>
