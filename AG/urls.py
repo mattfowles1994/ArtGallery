@@ -22,6 +22,9 @@ from pages.views import (
     about_view
 )
 
+admin.site.site_header = "Penny's Art Gallery Admin"
+admin.site.site_title = "Penny's Art Gallery Admin"
+
 urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('artwork/', include('artwork.urls')),

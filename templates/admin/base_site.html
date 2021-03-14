@@ -1,10 +1,10 @@
 
 {% extends "admin/base.html" %}
 {% load static  %}
-{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+{% block title %}{{ title }} | {{ site_title|default:_("Penny's Art Gallery Admin") }}{% endblock %}
 {% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static 'app/css/app.css' %}" />{% endblock %}
 {% block branding %}
-<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1>
+<h1 id="Penny's Art Gallery"><a href="{% url 'admin:index' %}">{{ site_header|default:_("Penny's Art Gallery") }}</a></h1>
 {% endblock %}
 
 
