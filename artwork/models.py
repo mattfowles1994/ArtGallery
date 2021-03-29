@@ -25,7 +25,8 @@ sortChoices = (
     ('year', 'Year'),
 )
 
-class SearchParams(models.Model):
+class SearchParam(models.Model):
+        searchName = models.CharField(max_length=120, blank=True, null=True)
         title = models.CharField(max_length=120, blank=True, null=True)
         price = models.DecimalField(decimal_places=2, max_digits=1000)
         width = models.IntegerField()
