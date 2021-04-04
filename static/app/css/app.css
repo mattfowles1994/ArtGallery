@@ -192,3 +192,7 @@ footer {
 .sidenav label {
   color: #9d9d9d;
 }
+
+.sidenav div div {
+  margin-top: 5px;
+}
