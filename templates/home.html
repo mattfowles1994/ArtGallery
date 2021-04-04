@@ -2,19 +2,20 @@
 
 {% block content %}
 
-<div id="mySidenav" class="sidenav">
-    <div>
+<nav id="mySidenav" class="sidenav">
+<div>
         <h1 style="text-align:left;float:left;">Filter</h1>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
-    </div>
-    <div>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            <b class="fas fa-times">
+        </a>
+</div>
         <form id="search"method="post" novalidate>
             {% csrf_token %}
             {% include 'includes/signupForm.html' %}
-            <button type="submit" class="btn btn-primary btn-block">Save</button>
+            <button type="submit" class="btn btn-primary btn-block">Search/Save</button>
         </form>
-    </div>
-</div>
+
+</nav>
 <span onclick="openNav()">open</span>
 
 <div id="main" class="container">

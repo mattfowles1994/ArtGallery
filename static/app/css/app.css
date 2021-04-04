@@ -188,3 +188,7 @@ footer {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+.sidenav label {
+  color: #9d9d9d;
+}
