@@ -1,6 +1,6 @@
 from django.http import HttpResponse
-from django.shortcuts import render
-from artwork.models import Artwork
+from django.shortcuts import render, get_object_or_404, redirect
+from artwork.models import Artwork, SearchParam
 from .forms import FilterForm
 
 # Create your views here.
@@ -12,7 +12,9 @@ def home_view(request, *args, **kwargs):
     if request.method == 'POST':
         form = FilterForm(request.POST)
         if form.is_valid():
-            SearchParam.objects.create()
+            search = form.save()
+            search.user = request.user.id
+            search.save()
             return redirect('home')
 
     my_context = {

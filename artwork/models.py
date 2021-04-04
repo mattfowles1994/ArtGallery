@@ -16,24 +16,15 @@ class Artwork(models.Model):
         def get_absolute_url(self):
                 return reverse("artwork:artwork", kwargs={"id": self.id})  #f"/artwork/{self.id}/"
 
-sortChoices = (
-    ('title','Title'),
-    ('price', 'Price'),
-    ('width','Width'),
-    ('height','Height'),
-    ('artist','Artist'),
-    ('year', 'Year'),
-)
-
 class SearchParam(models.Model):
         searchName = models.CharField(max_length=120, blank=True, null=True)
         title = models.CharField(max_length=120, blank=True, null=True)
-        price = models.DecimalField(decimal_places=2, max_digits=1000)
-        width = models.IntegerField()
-        height = models.IntegerField()
-        artist = models.CharField(max_length=120)
-        user = models.TextField()
+        price = models.DecimalField(decimal_places=2, max_digits=1000, blank=True, null=True)
+        width = models.IntegerField(blank=True, null=True)
+        height = models.IntegerField(blank=True, null=True)
+        artist = models.CharField(max_length=120, blank=True, null=True)
+        user = models.TextField(blank=True, null=True)
         year = models.IntegerField(blank=True, null=True)
-        sortBy = models.CharField(max_length=10, choices=sortChoices, default=title)
+
 
 
