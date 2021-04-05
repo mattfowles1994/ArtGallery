@@ -12,7 +12,17 @@
         <form id="search"method="post" novalidate>
             {% csrf_token %}
             {% include 'includes/signupForm.html' %}
-            <button type="submit" class="btn btn-primary btn-block">Search/Save</button>
+            <button type="submit" name="save" class="btn btn-primary btn-block">Search/Save</button>
+            <button type="submit" name="delete" class="btn btn-primary btn-block">Delete</button>
+        </form>
+        <form id="search"method="post" novalidate>
+            {% csrf_token %}
+            <select name="old_search">
+                {% for entry in search_list %}
+                    <option value="{{ entry.id }}">{{ entry.searchName }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" name="search" class="btn btn-primary btn-block">Search</button>
         </form>
 
 </nav>

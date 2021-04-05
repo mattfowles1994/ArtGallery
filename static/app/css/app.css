@@ -196,3 +196,16 @@ footer {
 .sidenav div div {
   margin-top: 5px;
 }
+
+form {
+  text-align: center;
+  font-family: 'Courgette', cursive;
+}
+
+form select {
+  margin: 10px;
+}
+
+button {
+  font-family: 'Courgette', cursive;
+}
