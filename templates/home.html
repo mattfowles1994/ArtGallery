@@ -16,6 +16,7 @@
             <button type="submit" name="delete" class="btn btn-primary btn-block">Delete</button>
         </form>
         <form id="search"method="post" novalidate>
+            <h1 style="text-align:left;float:left;">Saved Searches</h1>
             {% csrf_token %}
             <select name="old_search">
                 {% for entry in search_list %}
