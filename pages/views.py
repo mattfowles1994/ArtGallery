@@ -64,7 +64,6 @@ def home_view(request, *args, **kwargs):
         "object_list": queryset,
         "form" : form,
         "search_list": searchset,
-        "current_search": currentSearch
     }
     return render(request, "home.html", my_context)
 

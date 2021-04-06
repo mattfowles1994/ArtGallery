@@ -23,7 +23,7 @@ class SearchParam(models.Model):
         width = models.IntegerField(blank=True, null=True)
         height = models.IntegerField(blank=True, null=True)
         artist = models.CharField(max_length=120, blank=True, null=True)
-        user = models.TextField(blank=True, null=True)
+        user = models.TextField(blank=True, default=0)
         year = models.IntegerField(blank=True, null=True)
 
 
