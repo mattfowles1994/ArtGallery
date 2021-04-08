@@ -37,16 +37,20 @@
 
 
     <div class="row">
-        {% for object in object_list %}
-        <div class="col-lg-4 col-sm-6">
-            <a href="{{ object.get_absolute_url }}">
-                <div class="thumbnail">            
-                    <img id="image" src="{{ object.images.url }}" alt="{{ object.title }}">
-                    <p id='artworkTitle'>{{ object.title }}</p>
-                </div>
-            </a>
-        </div>
-        {% endfor %}
+        {% if not object_list %}
+            <h1 style="text-align:center;">There is no artwork under those criteria!</h1>
+        {% else %}
+            {% for object in object_list %}
+            <div class="col-lg-4 col-sm-6">
+                <a href="{{ object.get_absolute_url }}">
+                    <div class="thumbnail">            
+                        <img id="image" src="{{ object.images.url }}" alt="{{ object.title }}">
+                        <p id='artworkTitle'>{{ object.title }}</p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        {% endif %}
     </div>
 </div>
 <script>
