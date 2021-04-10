@@ -8,7 +8,7 @@ class SearchParamAdmin(admin.ModelAdmin):
     list_display = ('searchName', 'user')
 
 class EnquiryParamAdmin(admin.ModelAdmin):
-    list_display = ('username', 'staffusername')
+    list_display = ('userid', 'artworkname', 'staffusername')
 
 admin.site.register(Artwork, ArtworkAdmin)
 admin.site.register(SearchParam, SearchParamAdmin)

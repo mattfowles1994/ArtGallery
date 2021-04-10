@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.conf import settings
 
 # Create your models here.
 class Artwork(models.Model):
@@ -27,7 +28,8 @@ class SearchParam(models.Model):
         year = models.IntegerField(blank=True, null=True)
 
 class Enquiry(models.Model):
-        username = models.CharField(max_length=120)
+        artworkname = models.TextField(default=0)
+        userid = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.SET_NULL)
         message = models.TextField(max_length=350)
         staffusername = models.CharField(max_length=120)
 

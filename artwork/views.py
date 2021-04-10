@@ -15,16 +15,17 @@ def dynamic_lookup_view(request, id):
     form = EnquiryForm(request.POST or None)
 
     if request.method == 'POST':
-        if 'save' in request.POST:
-            form = EnquiryForm(request.POST)
-            if form.is_valid():
-                enquiry = form.save()
-                enquiry.user = request.username
-                enquiry.save()
-                return redirect('artwork/detail.html')
+        form = EnquiryForm(request.POST)
+        if form.is_valid():
+            enquiry = form.save()
+            enquiry.userid = request.user
+            enquiry.artworkname = obj.title
+            enquiry.save()
+            return redirect(obj)
 
     context = {
-        'object':obj
+        'object':obj,
+        "form" : form
     }
     return render(request, "artwork/detail.html", context)
 
