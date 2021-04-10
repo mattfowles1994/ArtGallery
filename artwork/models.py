@@ -26,5 +26,10 @@ class SearchParam(models.Model):
         user = models.TextField(blank=True, default=0)
         year = models.IntegerField(blank=True, null=True)
 
+class Enquiry(models.Model):
+        username = models.CharField()
+        message = models.TextField()
+        staffusername = models.CharField()
+
 
 

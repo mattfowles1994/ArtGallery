@@ -1,5 +1,5 @@
 from django import forms
-from .models import Artwork
+from .models import Artwork, Enquiry
 from django.contrib.auth.models import User
 
 class ArtworkForm(forms.ModelForm):
@@ -28,3 +28,15 @@ class RawArtForm(forms.Form):
     title = forms.CharField()
     description = forms.CharField()
     price = forms.DecimalField()
+
+class EnquiryForm(forms.ModelForm):
+    class Meta:
+        model = Enquiry
+        fields = ['message']
+
+    def __init__(self, *args, **kwargs):
+        super(FilterForm, self).__init__(*args, **kwargs)
+        self.fields['message'].widget.attrs['placeholder'] = 'Enter message here'
+
+
+

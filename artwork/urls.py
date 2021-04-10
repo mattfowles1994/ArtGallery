@@ -17,10 +17,7 @@ Including another URLconf
 from django.urls import path
 
 from artwork.views import (
-    artwork_detail_view, 
-    artwork_create_view,
     dynamic_lookup_view,
-    artwork_delete_view,
     artwork_list_view
 )
 
@@ -29,6 +26,4 @@ app_name = 'artwork'
 urlpatterns = [
     path('<int:id>/', dynamic_lookup_view, name='artwork'),
     path('list/', artwork_list_view),
-    path('create/', artwork_create_view),
-    path('<int:id>/delete', artwork_delete_view, name='product-delete')
 ]
