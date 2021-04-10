@@ -209,3 +209,13 @@ form select {
 button {
   font-family: 'Courgette', cursive;
 }
+
+#open {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: rgb(236, 240, 241, 0.6);
+  padding: 8px;
+  position: fixed;
+  left: 0;
+
+}

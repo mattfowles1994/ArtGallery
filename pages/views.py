@@ -38,6 +38,8 @@ def home_view(request, *args, **kwargs):
                 queryset = queryset.filter(year=currentSearch[0].year)
         except:
             form = FilterForm(request.POST or None)
+    else: 
+        form = FilterForm(request.POST or None)
     if request.method == 'POST':
         if 'save' in request.POST:
             form = FilterForm(request.POST)
@@ -62,7 +64,7 @@ def home_view(request, *args, **kwargs):
                 print(form.fields['searchName'])
                 search = form.save()
                 delete = SearchParam.objects.all().filter(user=request.user.id, searchName=search.searchName).delete()
-                request.session['search'] = 0
+                del request.session['search']
                 return redirect('home')
         if 'search' in request.POST:
             form = FilterForm(request.POST)
@@ -72,7 +74,7 @@ def home_view(request, *args, **kwargs):
         if 'reset' in request.POST:
             form = FilterForm(request.POST)
             if 'search' in request.session:
-                request.session['search'] = 0
+                del request.session['search']
             queryset = Artwork.objects.all()
 
     my_context = {
