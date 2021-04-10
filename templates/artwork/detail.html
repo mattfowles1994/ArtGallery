@@ -24,12 +24,14 @@
     <div class="col-md-4">
         <div class="thumbnail">   
             <ul id="detail">        
-                <li><strong>Title:</strong> {{ object.title }}</li>
-                <li><strong>Description:</strong> {{ object.descrilition }}</li>
-                <li><strong>Width:</strong> {{ object.width }}mm</li>
-                <li><strong>Height:</strong> {{ object.height }}mm</li>
-                <li><strong>Artist:</strong> {{ object.artist }}</li>
-                <li><strong>Year:</strong> {{ object.year }}</li>
+                <li><h3>Enquire about this piece here!</h3></li>
+                <li>
+                    <form id="search"method="post" novalidate>
+                        {% csrf_token %}
+                        {% include 'includes/signupForm.html' %}
+                        <button type="submit" name="save" class="btn btn-primary btn-block">Submit Enquiry</button>
+                    </form>
+                </li>
             </ul> 
         </div>
     </div>

@@ -27,9 +27,9 @@ class SearchParam(models.Model):
         year = models.IntegerField(blank=True, null=True)
 
 class Enquiry(models.Model):
-        username = models.CharField()
-        message = models.TextField()
-        staffusername = models.CharField()
+        username = models.CharField(max_length=120)
+        message = models.TextField(max_length=350)
+        staffusername = models.CharField(max_length=120)
 
 
 

@@ -35,7 +35,7 @@ class EnquiryForm(forms.ModelForm):
         fields = ['message']
 
     def __init__(self, *args, **kwargs):
-        super(FilterForm, self).__init__(*args, **kwargs)
+        super(EnquiryForm, self).__init__(*args, **kwargs)
         self.fields['message'].widget.attrs['placeholder'] = 'Enter message here'
 
 
