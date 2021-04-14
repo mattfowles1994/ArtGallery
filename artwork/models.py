@@ -31,7 +31,7 @@ class Enquiry(models.Model):
         artworkname = models.TextField(default=0)
         userid = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.SET_NULL)
         message = models.TextField(max_length=350)
-        staffusername = models.CharField(max_length=120)
+        staffusername = models.CharField(max_length=120, default='unassigned')
 
 
 

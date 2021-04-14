@@ -9,6 +9,10 @@ from .forms import ArtworkForm, RawArtForm, EnquiryForm
 def dynamic_lookup_view(request, id):
     try:
         obj = Artwork.objects.get(id=id)
+        try:
+            enq = Enquiry.objects.get.filter(userid=request.user, artworkname=obj.title)
+        except:
+            enq = None
     except Artwork.DoesNotExist:
         raise Http404
 
@@ -25,7 +29,8 @@ def dynamic_lookup_view(request, id):
 
     context = {
         'object':obj,
-        "form" : form
+        "form" : form,
+        "enq" :enq
     }
     return render(request, "artwork/detail.html", context)
 

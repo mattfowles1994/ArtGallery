@@ -25,6 +25,9 @@
         <div class="thumbnail">   
             <ul id="detail">        
                 <li><h3>Enquire about this piece here!</h3></li>
+                {% if enq %}
+                    <li>Enquiry already sent!</li>
+                {% endif %}
                 <li>
                     <form id="search"method="post" novalidate>
                         {% csrf_token %}
