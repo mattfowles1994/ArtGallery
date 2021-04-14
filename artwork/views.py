@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import Http404
-from .models import Artwork
+from .models import Artwork, Enquiry
 from .forms import ArtworkForm, RawArtForm, EnquiryForm
 
 # function based views
@@ -10,7 +10,7 @@ def dynamic_lookup_view(request, id):
     try:
         obj = Artwork.objects.get(id=id)
         try:
-            enq = Enquiry.objects.get.filter(userid=request.user, artworkname=obj.title)
+            enq = Enquiry.objects.all().filter(userid=request.user, artworkname=obj.title)
         except:
             enq = None
     except Artwork.DoesNotExist:

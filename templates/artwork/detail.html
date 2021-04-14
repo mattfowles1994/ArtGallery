@@ -26,15 +26,16 @@
             <ul id="detail">        
                 <li><h3>Enquire about this piece here!</h3></li>
                 {% if enq %}
-                    <li>Enquiry already sent!</li>
+                    <li>You have already enquired about this piece. Please contact us if you have any concerns</li>
+                {% else %}
+                    <li>
+                        <form id="search"method="post" novalidate>
+                            {% csrf_token %}
+                            {% include 'includes/signupForm.html' %}
+                            <button type="submit" name="save" class="btn btn-primary btn-block">Submit Enquiry</button>
+                        </form>
+                    </li>
                 {% endif %}
-                <li>
-                    <form id="search"method="post" novalidate>
-                        {% csrf_token %}
-                        {% include 'includes/signupForm.html' %}
-                        <button type="submit" name="save" class="btn btn-primary btn-block">Submit Enquiry</button>
-                    </form>
-                </li>
             </ul> 
         </div>
     </div>
