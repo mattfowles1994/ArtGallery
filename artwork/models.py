@@ -33,5 +33,9 @@ class Enquiry(models.Model):
         message = models.TextField(max_length=350)
         staffusername = models.CharField(max_length=120, default='unassigned')
 
+class New(models.Model):
+        eventname = models.TextField()
+        eventcomment = models.TextField(max_length=350)
+        active = models.BooleanField(default=0)
 
 

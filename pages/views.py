@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
-from artwork.models import Artwork, SearchParam
+from artwork.models import Artwork, SearchParam, New
 from .forms import FilterForm
 from django.db.models import Q
 
@@ -8,6 +8,7 @@ from django.db.models import Q
 def home_view(request, *args, **kwargs):
     #return HttpResponse("<h1>Hello World</h1>")
     queryset = Artwork.objects.all()
+    news = New.objects.filter(active=1).first()
     searchset = SearchParam.objects.all().filter(user=request.user.id)
     #print(request.session)
     if 'search' in request.session:
@@ -81,6 +82,7 @@ def home_view(request, *args, **kwargs):
         "object_list": queryset,
         "form" : form,
         "search_list": searchset,
+        "news" : news
     }
     return render(request, "home.html", my_context)
 
