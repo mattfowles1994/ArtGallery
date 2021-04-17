@@ -26,8 +26,8 @@ admin.site.site_header = "Penny's Art Gallery Admin"
 admin.site.site_title = "Penny's Art Gallery Admin"
 
 urlpatterns = [
-    path('accounts/', include('accounts.urls')),
-    path('artwork/', include('artwork.urls')),
+    path('accounts/', include('accounts.urls', namespace='acc')),
+    path('artwork/', include('artwork.urls', namespace='art')),
 
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
