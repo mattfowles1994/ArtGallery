@@ -21,24 +21,26 @@
             </ul> 
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="thumbnail">   
-            <ul id="detail">        
-                {% if enq %}
-                    <li><h3>You have already enquired about this piece. Please contact us if you have any concerns</h3></li>
-                {% else %}
-                    <li><h3>Enquire about this piece here!</h3></li>
-                    <li>
-                        <form id="search"method="post" novalidate>
-                            {% csrf_token %}
-                            {% include 'includes/signupForm.html' %}
-                            <button type="submit" name="save" class="btn btn-primary btn-block">Submit Enquiry</button>
-                        </form>
-                    </li>
-                {% endif %}
-            </ul> 
+    {% if user.is_authenticated %}
+        <div class="col-md-4">
+            <div class="thumbnail">   
+                <ul id="detail">        
+                    {% if enq %}
+                        <li><h3>You have already enquired about this piece. Please contact us if you have any concerns</h3></li>
+                    {% else %}
+                        <li><h3>Enquire about this piece here!</h3></li>
+                        <li>
+                            <form id="search"method="post" novalidate>
+                                {% csrf_token %}
+                                {% include 'includes/signupForm.html' %}
+                                <button type="submit" name="save" class="btn btn-primary btn-block">Submit Enquiry</button>
+                            </form>
+                        </li>
+                    {% endif %}
+                </ul> 
+            </div>
         </div>
-    </div>
+    {% endif %}
 </div>
 
 {% endblock %}
