@@ -36,7 +36,7 @@ def home_view(request, *args, **kwargs):
             if currentSearch[0].artist is not None:
                 queryset = queryset.filter(artist__startswith=currentSearch[0].artist)
             if currentSearch[0].year is not None:
-                queryset = queryset.filter(year=currentSearch[0].year)
+                queryset = queryset.filter(year__gte=currentSearch[0].year)
         except:
             form = FilterForm(request.POST or None)
     else: 
