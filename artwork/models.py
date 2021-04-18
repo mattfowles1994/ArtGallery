@@ -10,7 +10,7 @@ class Artwork(models.Model):
         width = models.IntegerField()
         height = models.IntegerField()
         artist = models.TextField(default='V.Galvao')
-        available = models.BooleanField(null=True)
+        available = models.BooleanField(default=0)
         images = models.ImageField(default='AG\images\default.PNG')
         year = models.IntegerField(default='0')
 
