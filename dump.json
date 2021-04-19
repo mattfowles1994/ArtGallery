@@ -1,5 +1,221 @@
 [
 {
+  "model": "auth.group",
+  "fields": {
+    "name": "CMS",
+    "permissions": [
+      [
+        "add_artwork",
+        "artwork",
+        "artwork"
+      ],
+      [
+        "change_artwork",
+        "artwork",
+        "artwork"
+      ],
+      [
+        "delete_artwork",
+        "artwork",
+        "artwork"
+      ],
+      [
+        "view_artwork",
+        "artwork",
+        "artwork"
+      ],
+      [
+        "add_searchparams",
+        "artwork",
+        "searchparam"
+      ],
+      [
+        "change_searchparams",
+        "artwork",
+        "searchparam"
+      ],
+      [
+        "delete_searchparams",
+        "artwork",
+        "searchparam"
+      ],
+      [
+        "view_searchparams",
+        "artwork",
+        "searchparam"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "fields": {
+    "name": "IMS",
+    "permissions": [
+      [
+        "add_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "change_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "delete_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "view_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "add_artwork",
+        "artwork",
+        "artwork"
+      ],
+      [
+        "change_artwork",
+        "artwork",
+        "artwork"
+      ],
+      [
+        "delete_artwork",
+        "artwork",
+        "artwork"
+      ],
+      [
+        "view_artwork",
+        "artwork",
+        "artwork"
+      ],
+      [
+        "add_searchparams",
+        "artwork",
+        "searchparam"
+      ],
+      [
+        "change_searchparams",
+        "artwork",
+        "searchparam"
+      ],
+      [
+        "delete_searchparams",
+        "artwork",
+        "searchparam"
+      ],
+      [
+        "view_searchparams",
+        "artwork",
+        "searchparam"
+      ],
+      [
+        "add_group",
+        "auth",
+        "group"
+      ],
+      [
+        "change_group",
+        "auth",
+        "group"
+      ],
+      [
+        "delete_group",
+        "auth",
+        "group"
+      ],
+      [
+        "view_group",
+        "auth",
+        "group"
+      ],
+      [
+        "add_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "change_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "delete_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "view_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "add_user",
+        "auth",
+        "user"
+      ],
+      [
+        "change_user",
+        "auth",
+        "user"
+      ],
+      [
+        "delete_user",
+        "auth",
+        "user"
+      ],
+      [
+        "view_user",
+        "auth",
+        "user"
+      ],
+      [
+        "add_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "change_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "delete_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "view_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "add_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "change_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "delete_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "view_session",
+        "sessions",
+        "session"
+      ]
+    ]
+  }
+},
+{
   "model": "auth.user",
   "fields": {
     "password": "pbkdf2_sha256$216000$qAw1HrmjqSPN$ccYtlYJhNk1YTjlwb9HUQaxcTeTYKdOkx1eXmosNpCs=",
@@ -12,7 +228,14 @@
     "is_staff": true,
     "is_active": true,
     "date_joined": "2021-01-31T10:34:00Z",
-    "groups": [],
+    "groups": [
+      [
+        "CMS"
+      ],
+      [
+        "IMS"
+      ]
+    ],
     "user_permissions": []
   }
 },
@@ -46,7 +269,11 @@
     "is_staff": true,
     "is_active": true,
     "date_joined": "2021-03-14T13:34:49Z",
-    "groups": [],
+    "groups": [
+      [
+        "CMS"
+      ]
+    ],
     "user_permissions": []
   }
 },
@@ -425,8 +652,8 @@
     "title": "Starry Night",
     "description": "",
     "price": "546816.00",
-    "width": "1200",
-    "height": "950",
+    "width": "1200mm",
+    "height": "950mm",
     "artist": "Van Gogh",
     "available": true,
     "images": "Starry_Night.jpg",
