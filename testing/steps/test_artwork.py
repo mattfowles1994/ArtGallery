@@ -19,7 +19,3 @@ def add_artwork(browser, live_server, title):
     browser.fill('width', 30)
     browser.fill('height', 40)
     browser.find_by_name(f'_save').click()
-
-#@when('I select "{item}"')
-#def view_artworks(browser, live_server, item):
-#    browser.links.find_by_text(item).click()
