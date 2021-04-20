@@ -1,6 +1,6 @@
 from django.core.management import call_command
 from selenium import webdriver
-from pytest_bdd import given, then, parsers
+from pytest_bdd import given, then, parsers, when
 import pytest
 
 #@pytest.fixture(autouse=True)
@@ -32,3 +32,19 @@ def admin_login(browser, client, live_server, db):
 @then(parsers.parse('I see the "{title}" is in the list'))
 def verify_artwork_added(browser, title):
     assert browser.links.find_by_text(title)
+
+@then(parsers.parse('I see the confirmation'))
+def verify_artwork_added(browser):
+    assert browser.find_by_css('.success')
+
+@then(parsers.parse('I see the error'))
+def verify_artwork_added(browser):
+    assert browser.find_by_css('.errornote')
+
+@when(parsers.parse('I select "{item}"'))
+def view_artworks(browser, live_server, item):
+    browser.links.find_by_text(item).click()
+
+@when('I confirm')
+def view_artworks(browser, live_server):
+    browser.find_by_value('Yes, I’m sure').click()

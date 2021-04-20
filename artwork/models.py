@@ -4,7 +4,7 @@ from django.conf import settings
 
 # Create your models here.
 class Artwork(models.Model):
-        title = models.CharField(max_length=120)
+        title = models.CharField(max_length=120, unique=True)
         description = models.TextField(blank=True, null=True)
         price = models.DecimalField(decimal_places=2, max_digits=1000)
         width = models.IntegerField()
