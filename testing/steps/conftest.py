@@ -43,7 +43,7 @@ def verify_artwork_added(browser):
 
 @when(parsers.parse('I select "{item}"'))
 def view_artworks(browser, live_server, item):
-    browser.links.find_by_text(item).click()
+    browser.links.find_by_text(item).first.click()
 
 @when('I confirm')
 def view_artworks(browser, live_server):

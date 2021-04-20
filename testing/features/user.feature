@@ -13,7 +13,6 @@ Feature: Manage User
         When I select "Users"
         When I select "mattCMS"
         When I select "Delete"
-        When I select "Delete"
         When I confirm
         Then I see the confirmation
 

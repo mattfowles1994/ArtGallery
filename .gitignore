@@ -2,3 +2,7 @@ accounts/migrations/
 artwork/migrations/
 pages/migrations/
 db.sqlite3
+\testing.steps.test_gallery
+\testing.steps.test_user
+\testing.steps.test_enquiry
+\testing\steps\__pycache__\
