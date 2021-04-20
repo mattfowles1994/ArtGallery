@@ -25,3 +25,8 @@ Feature: Manage Artwork
         When I select add artwork
         When I enter details of an item with the name "Starry Night"
         Then I see the error  
+
+    Scenario: Exclude title from new artwork
+        When I select add artwork
+        When I miss some details of an item with the name "The Last Supper"
+        Then I see the error 

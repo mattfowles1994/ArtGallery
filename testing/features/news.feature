@@ -16,8 +16,13 @@ Feature: Manage News
         When I confirm
         Then I see the confirmation
 
-    Scenario: Amend an User entry
+    Scenario: Amend a News entry
         When I select "News"
         When I select "Scream"
         When I enter amended details
         Then I see the "new" is in the list
+
+    Scenario: Add News with no name
+        When I select add news
+        When I enter some details of an item
+        Then I see the error

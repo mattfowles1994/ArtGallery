@@ -18,11 +18,9 @@ def add_artwork(browser, live_server, title):
     browser.fill('eventcomment', 'test news comment')
     browser.find_by_name(f'_save').click()
 
-@when(parsers.parse('I enter same details for username and password'))
+@when(parsers.parse('I enter some details of an item'))
 def add_artwork(browser, live_server):
-    browser.fill('username', 'abacus123')
-    browser.fill('password1', 'abacus123')
-    browser.fill('password2', 'abacus123')
+    browser.fill('eventcomment', 'test news comment')
     browser.find_by_name(f'_save').click()
 
 @when(parsers.parse('I enter amended details'))

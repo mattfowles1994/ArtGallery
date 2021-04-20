@@ -19,3 +19,11 @@ def add_artwork(browser, live_server, title):
     browser.fill('width', 30)
     browser.fill('height', 40)
     browser.find_by_name(f'_save').click()
+
+
+@when(parsers.parse('I miss some details of an item with the name "{title}"'))
+def add_artwork(browser, live_server, title):
+    browser.fill('price', 20)
+    browser.fill('width', 30)
+    browser.fill('height', 40)
+    browser.find_by_name(f'_save').click()

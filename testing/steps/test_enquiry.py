@@ -30,3 +30,7 @@ def add_artwork(browser, live_server):
 def add_artwork(browser, live_server):
     browser.fill('staffusername', 'matt')
     browser.find_by_name(f'_save').click()
+
+@then('I see the history')
+def add_artwork(browser, live_server):
+    assert browser.find_by_id(f'change-history')

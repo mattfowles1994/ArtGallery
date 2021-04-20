@@ -9,8 +9,8 @@ class SignUpTests(TestCase):
     def test_signup_status_code(self):
         url = reverse('accounts:signup')
         response = self.client.get(url)
-        self.assertEquals(response.status_code, 200)
+        self.assertEqual(response.status_code, 200)
 
     def test_signup_url_resolves_signup_view(self):
         view = resolve('/accounts/signup/')
-        self.assertEquals(view.func, signup)
+        self.assertEqual(view.func, signup)
