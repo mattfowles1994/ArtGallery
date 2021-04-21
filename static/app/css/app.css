@@ -22,6 +22,10 @@ div {
 	background: #2c3e50;
 }
 
+.navbar-inverse .navbar-nav>li>a {
+  color: #DDDDDD !important;
+}
+
 .gallery {
   width: 30%;
   height: 25%;
@@ -117,7 +121,7 @@ ul {
 }
 
 .icon-bar {
-  background-color: #9d9d9d !important;
+  background-color: #DDDDDD !important;
 }
 
 .current {
@@ -149,7 +153,7 @@ footer {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #9d9d9d;
+  color: #DDDDDD;
   display: block;
   transition: 0.3s;
 }
@@ -157,7 +161,7 @@ footer {
 .sidenav a {
   text-decoration: none;
   font-size: 25px;
-  color: #9d9d9d;
+  color: #DDDDDD;
   display: block;
   transition: 0.3s;
   margin-top: 20px;
@@ -190,7 +194,7 @@ footer {
 }
 
 .sidenav label {
-  color: #9d9d9d;
+  color: #DDDDDD;
 }
 
 .sidenav div div {
