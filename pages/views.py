@@ -46,12 +46,13 @@ def home_view(request, *args, **kwargs):
             form = FilterForm(request.POST)
             if form.is_valid():
                 search = form.save()
-                search.user = request.user.id
 
                 try:
+                    search.user = request.user.id
                     delete = SearchParam.objects.all().filter(user=search.user, searchName=search.searchName).delete()
                     search.save()
                 except:
+                    search.user = 0
                     search.save()
 
                 search = SearchParam.objects.all().filter(user=search.user, searchName=search.searchName).values_list('id', flat=True)
