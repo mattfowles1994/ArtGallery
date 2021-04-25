@@ -94,6 +94,7 @@ div {
 
 ul {
   margin: 0 !important;
+  list-style: none;
 }
 
 #about {
